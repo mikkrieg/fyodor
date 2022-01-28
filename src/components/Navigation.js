@@ -130,7 +130,7 @@ const Navigation = () => {
                   display: 'block', 
                   fontFamily: 'Sansita !important',
                   fontSize: {md: '1.5em', lg: '1.4em', xl: '1.6em' },
-                  marginRight: {md: '25%', lg:'15%' }
+                  marginRight: {md: '25%', xl:'-5%' }
                 }}
               >
                 Contact

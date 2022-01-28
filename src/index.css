@@ -14,3 +14,7 @@ code {
     monospace;
 }
 
+#root {
+  min-height: 100vh;
+}
+

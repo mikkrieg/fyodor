@@ -9,7 +9,9 @@ const Home = () => {
   useEffect(() => {
     setOnAbout(false);
     const body = document.body;
+    const footer = document.getElementsByTagName('footer');
     body.classList.remove('background-image');
+    footer[0].classList.remove('white-text');
   }, [])
 
   return (

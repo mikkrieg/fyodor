@@ -8,13 +8,18 @@ body {
   width: 25%;
 }
 
+.white-text {
+  color: #FFF;
+}
+
 /* Footer styling */
 footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   text-align: center;
   height: 2.5rem;
+  margin-top: 10px;
 }
 
 /* Link styling */
@@ -25,7 +30,9 @@ footer {
 
 /* About background */
 .background-image {
-  background-image: url('./../../img/bookshelf.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),  url('./../../img/bookshelf.jpg');
+  background-size: cover;
+  
 }
 
 /* Logo responsiveness */
@@ -33,5 +40,14 @@ footer {
   .logo {
     width: 15%;
     margin-left: 20px;
+  }
+  .background-image {
+    background-size: auto;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  footer {
+    position: absolute;
   }
 }
