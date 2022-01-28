@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,9 +12,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from './../img/Logo.JPG';
 import './styles/styles.css';
-
-
-const menuItems = ['About', 'Contact'];
 
 const Navigation = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -39,7 +37,9 @@ const Navigation = () => {
                 display: { xs: 'none', md: 'flex' }
               }}
             >
-              <img src={Logo} className='logo'/>
+              <Link to='/'>
+                <img src={Logo} className='logo'/>
+              </Link>
             </Typography>
             <Typography
               variant='h6'
@@ -79,29 +79,62 @@ const Navigation = () => {
                   color: '#000'
                 }}
               >
-                {menuItems.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign='center' className='menu-items' sx={{ color: '#6297AF', fontWeight: 'bold'}}>{page}</Typography>
+                <Link to='/' className='links'>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign='center' className='menu-items' sx={{ color: '#6297AF', fontWeight: 'bold'}}>Home</Typography>
                   </MenuItem>
-                ))}
+                </Link>
+                <Link to='/about' className='links'>
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign='center' className='menu-items' sx={{ color: '#6297AF', fontWeight: 'bold'}}>About</Typography>
+                  </MenuItem>
+                </Link>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Typography textAlign='center' className='menu-items' sx={{ color: '#6297AF', fontWeight: 'bold'}}>Contact</Typography>
+                </MenuItem>
               </Menu>
             </Box>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
-              {menuItems.map((page) => (
+              <Link to='/' className='links'>
                 <Button
-                  key={page}
                   onClick={handleCloseNavMenu}
                   sx={{
                     color: '#6297AF', 
                     display: 'block', 
                     fontFamily: 'Sansita !important',
-                    fontSize: {lg: '1.4em', xl: '1.6em' },
-                    marginRight: '15%'
+                    fontSize: {md: '1.5em', lg: '1.4em', xl: '1.6em' },
+                    marginRight: '15%',
                   }}
                 >
-                  {page}
+                  Home
                 </Button>
-              ))}
+              </Link>
+              <Link to='/about' className='links'>
+                <Button
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    color: '#6297AF', 
+                    display: 'block', 
+                    fontFamily: 'Sansita !important',
+                    fontSize: {md: '1.5em', lg: '1.4em', xl: '1.6em' },
+                    marginRight: '15%',
+                  }}
+                >
+                  About
+                </Button>
+              </Link>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{
+                  color: '#6297AF', 
+                  display: 'block', 
+                  fontFamily: 'Sansita !important',
+                  fontSize: {md: '1.5em', lg: '1.4em', xl: '1.6em' },
+                  marginRight: {md: '25%', lg:'15%' }
+                }}
+              >
+                Contact
+              </Button>
             </Box>
           </Toolbar>
         </Container>
