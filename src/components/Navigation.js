@@ -25,7 +25,7 @@ const Navigation = () => {
     };
   
     return (
-      <AppBar position='static' color='transparent'>
+      <AppBar position='static' color='inherit'>
         <Container maxWidth='xl'>
           <Toolbar disableGutters>
             <Typography

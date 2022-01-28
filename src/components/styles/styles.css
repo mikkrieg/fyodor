@@ -1,7 +1,14 @@
+/* Default stylings */
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
 .logo {
   width: 25%;
 }
 
+/* Footer styling */
 footer {
   position: absolute;
   bottom: 0;
@@ -10,11 +17,18 @@ footer {
   height: 2.5rem;
 }
 
+/* Link styling */
 .links {
   text-decoration: none;
   margin-right: 15%;
 }
 
+/* About background */
+.background-image {
+  background-image: url('./../../img/bookshelf.jpg');
+}
+
+/* Logo responsiveness */
 @media only screen and (min-width: 700px) {
   .logo {
     width: 15%;
