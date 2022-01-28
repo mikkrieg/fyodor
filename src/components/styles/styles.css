@@ -1,6 +1,15 @@
 .logo {
   width: 25%;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 2.5rem;
+}
+
 @media only screen and (min-width: 1200px) {
   .logo {
     width: 15%;
