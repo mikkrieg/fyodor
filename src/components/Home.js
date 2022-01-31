@@ -3,6 +3,7 @@ import BookDisplay from './BookDisplay';
 import {AppContext} from './../AppContext';
 
 
+
 const Home = () => {
   const {setOnAbout} = useContext(AppContext);
 
@@ -15,7 +16,9 @@ const Home = () => {
   }, [])
 
   return (
-    <BookDisplay />
+    <>
+      <BookDisplay />
+    </>
   )
 }
 

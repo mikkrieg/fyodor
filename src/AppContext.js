@@ -6,12 +6,15 @@ export const AppContext = React.createContext();
 export const AppProvider = ({children}) => {
 
   const [onAbout, setOnAbout] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   return (
     <AppContext.Provider value=
     {{
       onAbout,
-      setOnAbout
+      setOnAbout,
+      showContact,
+      setShowContact
       }}
     >
       {children}

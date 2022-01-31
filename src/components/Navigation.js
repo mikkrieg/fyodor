@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {Link} from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -11,10 +11,13 @@ import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Logo from './../img/Logo.JPG';
+import ContactModal from './ContactModal';
+import {AppContext} from './../AppContext';
 import './styles/styles.css';
 
 const Navigation = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
+    const {showContact, setShowContact } = useContext(AppContext);
   
     const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
@@ -23,6 +26,10 @@ const Navigation = () => {
     const handleCloseNavMenu = () => {
       setAnchorElNav(null);
     };
+
+    const handleContactModal = () => {
+      setShowContact(true);
+    }
   
     return (
       <AppBar position='static' color='inherit'>
@@ -89,7 +96,7 @@ const Navigation = () => {
                     <Typography textAlign='center' className='menu-items' sx={{ color: '#6297AF', fontWeight: 'bold'}}>About</Typography>
                   </MenuItem>
                 </Link>
-                <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem onClick={function(e){handleCloseNavMenu(); handleContactModal();}}>
                   <Typography textAlign='center' className='menu-items' sx={{ color: '#6297AF', fontWeight: 'bold'}}>Contact</Typography>
                 </MenuItem>
               </Menu>
@@ -124,7 +131,7 @@ const Navigation = () => {
                 </Button>
               </Link>
               <Button
-                onClick={handleCloseNavMenu}
+                onClick={function(e){handleCloseNavMenu(); handleContactModal();}}
                 sx={{
                   color: '#6297AF', 
                   display: 'block', 
@@ -137,6 +144,7 @@ const Navigation = () => {
               </Button>
             </Box>
           </Toolbar>
+          <ContactModal />
         </Container>
       </AppBar>
     );
