@@ -1,42 +1,20 @@
 import React from 'react';
-import PlaceHolder from './../img/placeholder.jpg';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Container';
 import Book from './Book';
 import Box from '@mui/material/Box';
-
-const books = [
-  {
-    image: {PlaceHolder},
-    id: 1
-  },
-  {
-    image: {PlaceHolder},
-    id: 2
-  },
-  {
-    image: {PlaceHolder},
-    id: 3
-  },
-  {
-    image: {PlaceHolder},
-    id: 4
-  },
-  {
-    image: {PlaceHolder},
-    id: 5
-  },
-  {
-    image: {PlaceHolder},
-    id: 6
-  },
-]
 
 const BookDisplay = () => {
   return (
     <> 
       <Container 
       maxWidth='xl' 
+      sx={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+      }}
         >
         <Grid 
           lg={6}
@@ -52,7 +30,7 @@ const BookDisplay = () => {
               }
             }}
         >
-          {Array.from(Array(6)).map((index) => (
+          {Array.from(Array(6).map((index) => (
             <Box 
               sx={{
                 backgroundColor: '#6297AF',
@@ -63,11 +41,9 @@ const BookDisplay = () => {
                 justifyContent: 'center',
               }}
             >
-              <Book
-                // image={image}
-              />
+              <Book/>
             </Box>
-          ))}
+          )))}
         </Grid>
       </Container>
     </>
