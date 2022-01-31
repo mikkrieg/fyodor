@@ -1,13 +1,18 @@
-import React from 'react';
-import Typography from '@mui/material/Typography';
-import PlaceHolder from './../img/placeholder.jpg';
+import React, {useContext} from 'react';
+import './styles/styles.css';
+import {AppContext} from './../AppContext';
+
 
 const Book = (props) => {
-  const image = props.image; 
-  console.log()
+  const {image} = props.image;
+  const {setShowBookModal} = useContext(AppContext);
+
+  const handleBookModal = () => {
+    setShowBookModal(true);
+  }
   return (
   <>
-  <Typography textAlign='center'>{image} Hi</Typography>
+    <img src={image.PlaceHolder} className='home-images' onClick={handleBookModal}/>
   </>
   )
 }

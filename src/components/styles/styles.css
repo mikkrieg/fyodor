@@ -12,6 +12,10 @@ body {
   color: #FFF;
 }
 
+.home-images:hover {
+  opacity: 0.1;
+}
+
 /* Footer styling */
 footer {
   position: relative;
