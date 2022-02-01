@@ -10,6 +10,7 @@ const Book = (props) => {
   const handleBookModal = () => {
     setShowBookModal(true);
   }
+
   return (
   <>
     <img src={image.PlaceHolder} className='home-images' onClick={handleBookModal}/>
