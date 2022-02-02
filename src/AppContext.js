@@ -8,6 +8,7 @@ export const AppProvider = ({children}) => {
   const [onAbout, setOnAbout] = useState(false);
   const [showContact, setShowContact] = useState(false);
   const [showBookModal, setShowBookModal] = useState(false);
+  const [bookIndex, setBookIndex] = useState(null);
 
   return (
     <AppContext.Provider value=
@@ -17,7 +18,9 @@ export const AppProvider = ({children}) => {
       showContact,
       setShowContact,
       showBookModal,
-      setShowBookModal
+      setShowBookModal,
+      bookIndex,
+      setBookIndex
       }}
     >
       {children}

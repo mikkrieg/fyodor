@@ -38,10 +38,18 @@ const bookRow2 = [
 ]
 
 const BookDisplay = () => {
-  const {setShowBookModal} = useContext(AppContext);
+  const {setShowBookModal, setBookIndex} = useContext(AppContext);
 
   const handleBookModal = () => {
     setShowBookModal(true);
+  }
+
+  const settingFirstRowIndexes = (index) => {
+    setBookIndex(index)
+  }
+
+  const settingSecondRowIndexes = (index) => {
+    setBookIndex(index + 3);
   }
 
   return (
@@ -69,7 +77,7 @@ const BookDisplay = () => {
         >
           {bookRow1.map((image, index) => (
             <Box 
-              onClick={handleBookModal}
+              onClick={function(e){handleBookModal(); settingFirstRowIndexes(index)}}
               key={index}
               sx={{
                 backgroundColor: '#6297AF',
@@ -103,7 +111,7 @@ const BookDisplay = () => {
         >
           {bookRow2.map((image, index) => (
             <Box 
-              onClick={handleBookModal}
+              onClick={function(e){handleBookModal(); settingSecondRowIndexes(index)}}
               key={index}
               sx={{
                 backgroundColor: '#6297AF',

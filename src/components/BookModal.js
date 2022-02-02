@@ -6,8 +6,33 @@ import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
 import {AppContext} from './../AppContext';
 
+const BookInfo = [
+  {
+    content: "LoremIpsum1"
+  },
+  {
+    content: "LoremIpsum2"  
+  },
+  {
+    content: "LoremIpsum3"  
+  },
+  {
+    content: "LoremIpsum4"  
+  },
+  {
+    content: "LoremIpsum5"  
+  },
+  {
+    content: "LoremIpsum6"  
+  },
+]
+
 const BookModal = () => {
-  const {showBookModal, setShowBookModal} = useContext(AppContext);
+  const {showBookModal, setShowBookModal, bookIndex} = useContext(AppContext);
+  let content;
+  if(bookIndex !== null) {
+    content = BookInfo[bookIndex].content;
+  }
   const handleClose = () => setShowBookModal(false);
   return (
     <Modal
@@ -42,7 +67,7 @@ const BookModal = () => {
             margin: 'auto'
           }}
         >
-          Lorem Ipsum
+          {content}
         </Typography>
       </Box>
     </Fade>
