@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Container';
 import Book from './Book';
 import Box from '@mui/material/Box';
 import PlaceHolder from './../img/placeholder.jpg';
+import BookModal from './BookModal';
+import {AppContext} from './../AppContext';
 
 const bookRow1 = [
   {
@@ -36,15 +38,18 @@ const bookRow2 = [
 ]
 
 const BookDisplay = () => {
+  const {setShowBookModal} = useContext(AppContext);
+
+  const handleBookModal = () => {
+    setShowBookModal(true);
+  }
+
   return (
     <> 
       <Container 
       maxWidth='xl' 
       sx={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
+        marginTop: '7%'
       }}
         >
         <Grid 
@@ -59,11 +64,12 @@ const BookDisplay = () => {
             justifyContent: {
               md: 'space-evenly'
               },
-              marginBottom: '15px'
+              marginBottom: {xs: '1px', md: '15px'}
             }}
         >
           {bookRow1.map((image, index) => (
             <Box 
+              onClick={handleBookModal}
               key={index}
               sx={{
                 backgroundColor: '#6297AF',
@@ -72,6 +78,7 @@ const BookDisplay = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                marginBottom: {xs: '5px', md: '0px'}
               }}
             >
               <Book
@@ -96,6 +103,7 @@ const BookDisplay = () => {
         >
           {bookRow2.map((image, index) => (
             <Box 
+              onClick={handleBookModal}
               key={index}
               sx={{
                 backgroundColor: '#6297AF',
@@ -104,6 +112,7 @@ const BookDisplay = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                marginBottom: {xs: '5px', md: '0px'}
               }}
             >
               <Book
@@ -112,6 +121,7 @@ const BookDisplay = () => {
             </Box>
           ))}
         </Grid>
+        <BookModal />
       </Container>
     </>
   )
