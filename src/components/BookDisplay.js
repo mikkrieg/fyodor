@@ -3,36 +3,41 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Container';
 import Book from './Book';
 import Box from '@mui/material/Box';
-import PlaceHolder from './../img/placeholder.jpg';
+import Perekati from './../img/perekati.JPG';
+import OpenToInterpretation from './../img/open_to_interpretation.JPG';
+import LingeringEffects from './../img/lingering_effects.JPG';
+import LastOne from './../img/last_one.JPG';
+import Essences from './../img/essences.JPG';
+import Mesopotamia from './../img/mesopotamia.JPG';
 import BookModal from './BookModal';
 import {AppContext} from './../AppContext';
 
 const bookRow1 = [
   {
-    image: {PlaceHolder},
+    image: [Mesopotamia],
     index: 0
   },
   {
-    image: {PlaceHolder},
+    image: [Essences],
     index: 1
   },
   {
-    image: {PlaceHolder},
+    image: [Perekati],
     index: 2
   },
 ]
 
 const bookRow2 = [
   {
-    image: {PlaceHolder},
+    image: [OpenToInterpretation],
     index: 3
   },
   {
-    image: {PlaceHolder},
+    image: [LingeringEffects],
     index: 4
   },
   {
-    image: {PlaceHolder},
+    image: [LastOne],
     index: 5
   },
 ]

@@ -34,6 +34,8 @@ footer {
   background-size: cover;
 }
 
+
+/* Modal styling */
 .modal-link {
   text-decoration: none;
   color: #FFF !important;
@@ -43,32 +45,9 @@ footer {
   color: blue !important;
 }
 
-/* Image carousel
-.home-images:hover {
-  animation-name: image-carousel;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-} */
-
-/* .wrapper img {
-  top: 0px;
-	left: 0px;
-	position: absolute;
-	animation: showMe 0.8s linear infinite 0s forwards;
-	animation-play-state: paused;	
+.home-images {
+  width: 40%;
 }
-
-.wrapper:hover img {
-	animation-play-state: running;	
-}
-
-@keyframes showMe {
-  0% { visibility: visible; z-index: 100; }
-	12.5% { visibility: visible; z-index: 100; }
-	25% { visibility: hidden; z-index: 0; }
-  100% { visibility: hidden; z-index: 0; }
-  } */
 
 /* Logo responsiveness */
 @media only screen and (min-width: 700px) {
@@ -81,6 +60,7 @@ footer {
   }
 }
 
+/* Footer position on larger screens */
 @media only screen and (min-width: 1300px) {
   footer {
     position: absolute;
