@@ -10,7 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Logo from './../img/Logo.JPG';
+import Logo from './../img/Logo.jpg';
 import ContactModal from './ContactModal';
 import {AppContext} from './../AppContext';
 import './styles/styles.css';

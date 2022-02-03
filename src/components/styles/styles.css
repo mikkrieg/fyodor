@@ -36,6 +36,11 @@ footer {
 
 .modal-link {
   text-decoration: none;
+  color: #FFF !important;
+}
+
+.modal-link:hover {
+  color: blue !important;
 }
 
 /* Image carousel
