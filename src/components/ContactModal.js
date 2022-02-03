@@ -31,7 +31,7 @@ const ContactModal = () => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        bgcolor: '#6297AF',
+        bgcolor: '#3d677a',
         border: '2px solid #FFF',
         boxShadow: 24,
         p: 4,
