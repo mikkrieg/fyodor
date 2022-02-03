@@ -3,42 +3,48 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Container';
 import Book from './Book';
 import Box from '@mui/material/Box';
-import Perekati from './../img/perekati.JPG';
-import OpenToInterpretation from './../img/open_to_interpretation.JPG';
-import LingeringEffects from './../img/lingering_effects.JPG';
-import LastOne from './../img/last_one.JPG';
-import Essences from './../img/essences.JPG';
-import Mesopotamia from './../img/mesopotamia.JPG';
+import Perekati from './../img/perekati.jpg';
+import OpenToInterpretation from './../img/open_to_interpretation.jpg';
+import LingeringEffects from './../img/lingering_effects.jpg';
+import LastOne from './../img/last_one.jpg';
+import Essences from './../img/essences.jpg';
+import Mesopotamia from './../img/mesopotamia.jpg';
 import BookModal from './BookModal';
 import {AppContext} from './../AppContext';
 
 const bookRow1 = [
   {
     image: [Mesopotamia],
-    index: 0
+    index: 0,
+    title: 'Mesopotamia'
   },
   {
     image: [Essences],
-    index: 1
+    index: 1,
+    title: 'Essences'
   },
   {
     image: [Perekati],
-    index: 2
+    index: 2,
+    title: 'Perekati'
   },
 ]
 
 const bookRow2 = [
   {
     image: [OpenToInterpretation],
-    index: 3
+    index: 3,
+    title: 'Open To Interpretation'
   },
   {
     image: [LingeringEffects],
-    index: 4
+    index: 4,
+    title: 'Lingering Effects'
   },
   {
     image: [LastOne],
-    index: 5
+    index: 5,
+    title: 'Last One'
   },
 ]
 
@@ -80,15 +86,16 @@ const BookDisplay = () => {
               marginBottom: {xs: '1px', md: '15px'}
             }}
         >
-          {bookRow1.map((image, index) => (
+          {bookRow1.map((image, index, title) => (
             <Box 
               onClick={function(e){handleBookModal(); settingFirstRowIndexes(index)}}
               key={index}
               sx={{
                 backgroundColor: '#6297AF',
-                width: '340px',
+                width: '250px',
                 height: '220px',
                 display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginBottom: {xs: '5px', md: '0px'}
@@ -96,6 +103,7 @@ const BookDisplay = () => {
             >
               <Book
                 image={image}
+                title={title}
               />
             </Box>
           ))}
@@ -114,22 +122,24 @@ const BookDisplay = () => {
               },
             }}
         >
-          {bookRow2.map((image, index) => (
+          {bookRow2.map((image, index, title) => (
             <Box 
               onClick={function(e){handleBookModal(); settingSecondRowIndexes(index)}}
               key={index}
               sx={{
                 backgroundColor: '#6297AF',
-                width: '340px',
+                width: '250px',
                 height: '220px',
                 display: 'flex',
                 alignItems: 'center',
+                flexDirection: 'column',
                 justifyContent: 'center',
                 marginBottom: {xs: '5px', md: '0px'}
               }}
             >
               <Book
                 image={image}
+                title={title}
               />
             </Box>
           ))}
@@ -141,14 +151,3 @@ const BookDisplay = () => {
 }
 
 export default BookDisplay;
-
-// {Array.from(Array(6)).map((index) => (
-//   <Box 
-//     sx={{
-//       backgroundColor: '#6297AF',
-//       width: '100px',
-//       height: '100px',
-//       display: 'flex',
-//       alignItems: 'center',
-//       justifyContent: 'center',
-//     }}

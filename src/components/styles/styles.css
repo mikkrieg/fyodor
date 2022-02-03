@@ -19,7 +19,8 @@ footer {
   width: 100%;
   text-align: center;
   height: 2.5rem;
-  margin-top: 10px;
+  margin-top: 50px;
+  color: #FFF;
 }
 
 /* Link styling */
@@ -46,7 +47,9 @@ footer {
 }
 
 .home-images {
-  width: 40%;
+  width: 50%;
+  height: 75%;
+  margin-top: 15px;
 }
 
 /* Logo responsiveness */

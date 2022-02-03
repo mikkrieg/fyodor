@@ -1,24 +1,11 @@
-import React, {useContext, useEffect} from 'react';
-import {AppContext} from './../AppContext';
+import React from 'react';
 import './styles/styles.css';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { flexbox } from '@mui/system';
 
 const About = () => {
-  const { onAbout, setOnAbout } = useContext(AppContext);
-
-  useEffect(() => {
-    setOnAbout(true);
-  }, [])
-
-  if(onAbout === true) {
-    const body = document.body;
-    body.classList.add('background-image');
-  }
-
   const English = () => {
     const heading = document.getElementById('heading-text');
     const body1 = document.getElementById('body-text1');

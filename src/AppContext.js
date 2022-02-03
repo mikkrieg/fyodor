@@ -5,7 +5,6 @@ export const AppContext = React.createContext();
 
 export const AppProvider = ({children}) => {
 
-  const [onAbout, setOnAbout] = useState(false);
   const [showContact, setShowContact] = useState(false);
   const [showBookModal, setShowBookModal] = useState(false);
   const [bookIndex, setBookIndex] = useState(null);
@@ -13,8 +12,6 @@ export const AppProvider = ({children}) => {
   return (
     <AppContext.Provider value=
     {{
-      onAbout,
-      setOnAbout,
       showContact,
       setShowContact,
       showBookModal,
