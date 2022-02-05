@@ -101,7 +101,7 @@ const Navigation = () => {
                 </MenuItem>
               </Menu>
             </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
+            <Box sx={{flexGrow: 1, display: { xs: 'none', md: 'flex'}, justifyContent: 'flex-end'}}>
               <Link to='/' className='links'>
                 <Button
                   onClick={handleCloseNavMenu}
@@ -137,7 +137,7 @@ const Navigation = () => {
                   display: 'block', 
                   fontFamily: 'Sansita !important',
                   fontSize: {md: '1.5em', lg: '1.4em', xl: '1.6em' },
-                  marginRight: {md: '25%', xl:'-5%' }
+                  marginRight: {md: '25%', lg: '20%', xl: '5%'}
                 }}
               >
                 Contact

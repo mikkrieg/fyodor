@@ -50,6 +50,7 @@ footer {
   width: 50%;
   height: 75%;
   margin-top: 15px;
+  cursor: pointer;
 }
 
 /* Logo responsiveness */
@@ -60,12 +61,5 @@ footer {
   }
   .background-image {
     background-size: auto;
-  }
-}
-
-/* Footer position on larger screens */
-@media only screen and (min-width: 1300px) {
-  footer {
-    position: absolute;
   }
 }

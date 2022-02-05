@@ -120,6 +120,7 @@ const BookDisplay = () => {
             justifyContent: {
               md: 'space-evenly'
               },
+            marginBottom: {xl: '12%'}
             }}
         >
           {bookRow2.map((image, index, title) => (
