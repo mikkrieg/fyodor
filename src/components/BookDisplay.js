@@ -16,17 +16,17 @@ const bookRow1 = [
   {
     image: [Mesopotamia],
     index: 0,
-    title: 'Mesopotamia'
+    title: 'Междуречье'
   },
   {
     image: [Essences],
     index: 1,
-    title: 'Essences'
+    title: 'Существа и сущности'
   },
   {
     image: [Perekati],
     index: 2,
-    title: 'Perekati'
+    title: 'Перекати-Море'
   },
 ]
 
@@ -44,7 +44,7 @@ const bookRow2 = [
   {
     image: [LastOne],
     index: 5,
-    title: 'Last One'
+    title: 'Записки преданного человека'
   },
 ]
 

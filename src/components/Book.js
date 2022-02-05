@@ -9,7 +9,7 @@ const Book = (props) => {
   <>
 
     <img src={image} className='home-images'/>
-    <Typography className='white-text' sx={{marginTop: '5px', fontFamily: 'Sansita', fontSize:'1.2em'}}>{title}</Typography>
+    <Typography className='white-text' sx={{marginTop: '5px', fontFamily: 'Sansita', fontSize:'1.1em', fontWeight: 'bold'}}>{title}</Typography>
   </>
   )
 }

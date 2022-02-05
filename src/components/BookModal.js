@@ -8,30 +8,72 @@ import {AppContext} from './../AppContext';
 
 const BookInfo = [
   {
-    content: "LoremIpsum1"
+    title: "Междуречье, 2021",
+    author:"текст: Феликс Аксёнцев",
+    illustrator: "иллюстрации: Андрей Дорохин",
+    publisher: "Publisher: Библиотека Стрелочника Фёдора",
+    isbn: "ISBN: 978-1-63877-209-5",
+    extra: ""
+    
   },
   {
-    content: "LoremIpsum2"  
+    title: "Существа и сущности, 2019",
+    author:"текст: Лея Любомирская",
+    illustrator: "иллюстрации: Андрей Дорохин",
+    publisher: "Publisher: Библиотека Стрелочника Фёдора",
+    isbn: "ISBN: 978-609-8213-68-3",
+    extra: ""
   },
   {
-    content: "LoremIpsum3"  
+    title: "Перекати-Море, 2017",
+    author:"текст: Феликс Аксёнцев",
+    illustrator: "иллюстрации: Александр Кригель",
+    publisher: "Publisher: Библиотека Стрелочника Фёдора",
+    isbn: "ISBN: 978-609-8213-15-7",
+    extra: "(опубликована в сотрудничестве с издательством Logvino Literaturos Namai)"
   },
   {
-    content: "LoremIpsum4"  
+    title: "Open to Interpretation, 2020",
+    author:"Author: Alexander Kriegel",
+    illustrator: "",
+    publisher: "Publisher: Библиотека Стрелочника Фёдора",
+    isbn: "ISBN: 978-1-71-578946-6",
+    extra:""
   },
   {
-    content: "LoremIpsum5"  
+    title: "Lingering Effects",
+    author:"Author: Alexander Kriegel",
+    illustrator: "",
+    publisher: "Publisher: Библиотека Стрелочника Фёдора",
+    isbn: "ISBN: 978-1-00-634205-9",
+    extra: ""
   },
   {
-    content: "LoremIpsum6"  
+    title: "Записки преданного человека, 2020",
+    author:"текст: Константин Густавович Игельстром",
+    illustrator: "",
+    publisher: "Publisher: Библиотека Стрелочника Фёдора",
+    isbn: "ISBN: 978-1-63-684475-6",
+    extra: "(под редакцией А.Ю. Игельстрома)" 
   },
 ]
 
 const BookModal = () => {
   const {showBookModal, setShowBookModal, bookIndex} = useContext(AppContext);
-  let content;
+  let title;
+  let author;
+  let illustrator;
+  let publisher;
+  let isbn;
+  let extra;
+
   if(bookIndex !== null) {
-    content = BookInfo[bookIndex].content;
+    title = BookInfo[bookIndex].title;
+    author = BookInfo[bookIndex].author;
+    illustrator = BookInfo[bookIndex].illustrator;
+    publisher = BookInfo[bookIndex].publisher;
+    isbn = BookInfo[bookIndex].isbn;
+    extra = BookInfo[bookIndex].extra;
   }
   const handleClose = () => setShowBookModal(false);
   return (
@@ -52,8 +94,8 @@ const BookModal = () => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        bgcolor: 'background.paper',
-        border: '2px solid #000',
+        bgcolor: '#3d677a',
+        border: '2px solid #FFF',
         boxShadow: 24,
         p: 4,
       }}>
@@ -64,10 +106,68 @@ const BookModal = () => {
             fontSize: {xs: '1.6em'}, 
             fontWeight: 'bold',
             width: '100%', 
-            margin: 'auto'
+            margin: 'auto',
+            color: '#FFF',
+            paddingBottom: '10px'
           }}
         >
-          {content}
+          {title}
+        </Typography>
+        <br/>
+        <Typography 
+          variant='h4' 
+          sx={{ 
+            textAlign: 'center', 
+            fontSize: {xs: '1.6em'}, 
+            width: '100%', 
+            margin: 'auto',
+            color: '#FFF',
+            paddingBottom: '10px'
+          }}
+        >
+          {author}
+          <br/>
+          {bookIndex === 5 ? extra : ""}
+        </Typography>
+        <Typography 
+          variant='h4' 
+          sx={{ 
+            textAlign: 'center', 
+            fontSize: {xs: '1.6em'}, 
+            width: '100%', 
+            margin: 'auto',
+            color: '#FFF',
+            paddingBottom: '10px'
+          }}
+        >
+          {illustrator}
+        </Typography> 
+        <Typography 
+          variant='h4' 
+          sx={{ 
+            textAlign: 'center', 
+            fontSize: {xs: '1.6em'}, 
+            width: '100%', 
+            margin: 'auto',
+            color: '#FFF',
+            paddingBottom: '10px'
+          }}
+        >
+          {publisher}
+          <br/>
+          {bookIndex === 2 ? extra : ""}
+        </Typography>
+        <Typography 
+          variant='h4' 
+          sx={{ 
+            textAlign: 'center', 
+            fontSize: {xs: '1.6em'}, 
+            width: '100%', 
+            margin: 'auto',
+            color: '#FFF'
+          }}
+        >
+          {isbn}
         </Typography>
       </Box>
     </Fade>
