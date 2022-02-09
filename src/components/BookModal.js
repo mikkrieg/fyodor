@@ -4,7 +4,9 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
+import Icon from './../img/pdf-icon.png'; 
 import {AppContext} from './../AppContext';
+import { flexbox } from '@mui/system';
 
 const BookInfo = [
   {
@@ -66,6 +68,13 @@ const BookModal = () => {
   let publisher;
   let isbn;
   let extra;
+  let link;
+
+  if(bookIndex === 0) {
+    link = "https://drive.google.com/file/d/12mHjuI1tAhDkqecVmPW1fPjk0HNVFjhb/view"
+  } else if(bookIndex === 1) {
+    link = "https://drive.google.com/file/d/1Kjt1n0tZgjBkiTKlIOE31wE7_7188Q2s/view?usp=sharing"
+  }
 
   if(bookIndex !== null) {
     title = BookInfo[bookIndex].title;
@@ -75,6 +84,8 @@ const BookModal = () => {
     isbn = BookInfo[bookIndex].isbn;
     extra = BookInfo[bookIndex].extra;
   }
+
+  console.log(bookIndex);
   const handleClose = () => setShowBookModal(false);
   return (
     <Modal
@@ -97,7 +108,7 @@ const BookModal = () => {
         bgcolor: '#3d677a',
         border: '2px solid #FFF',
         boxShadow: 24,
-        p: 4,
+        p: 2,
       }}>
         <Typography 
           variant='h4' 
@@ -169,6 +180,13 @@ const BookModal = () => {
         >
           {isbn}
         </Typography>
+        {bookIndex === 0 || bookIndex === 1 ?
+          <Box sx={{display: "flex", justifyContent: 'flex-end'}}>
+            <a href={link} className='pdf-link' target='_blank'>
+              <img src={Icon} alt="pdf icon" className='pdf-icon'/>
+            </a>
+          </Box> 
+        : "" }
       </Box>
     </Fade>
   </Modal>

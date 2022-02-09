@@ -23,6 +23,40 @@ const About = () => {
     body6.textContent = "Concerning the distribution of editions: Fyodor switches points to wherever the spirit moves the author" 
   }
 
+  const Belorusian = () => {
+    const heading = document.getElementById('heading-text');
+    const body1 = document.getElementById('body-text1');
+    const body2 = document.getElementById('body-text2');
+    const body3 = document.getElementById('body-text3');
+    const body4 = document.getElementById('body-text4');
+    const body5 = document.getElementById('body-text5');
+    const body6 = document.getElementById('body-text6');
+    heading.textContent='Аб нашым выдавецтве'
+    body1.textContent = "Стрэлачнік Тодар дзейнічае на Паўднёва-Заходнім узбярэжжы Ціхага Акіяну і друкуе тое, што яму прыйшлося да густу."
+    body2.textContent = "Нам падабаецца быць незалежнымі, суб'ектыўнымі і невялікімі."
+    body3.textContent = "Стрэлачнік Тодар пакрое ўсе выдаткі на першы наклад абраных манускрыптаў (ад мудрагелістых вершаў да кулінарных даведнікаў) - дызайн, макетаванне, друк, пошту, і, магчыма, ілюстрацыі."
+    body4.textContent = "Першы наклад - ад 25 да 100 асобнікаў. Аўтар, ў якасці ганарару, атрымлівае свае кнігі і захоўвае аўтарскія правы на тэкст."
+    body5.textContent = "Капірайт на выданне застаецца ў капцёрцы Стрэлачніка Тодара."
+    body6.textContent = "Пра распаўсюд: Стрэлачнік Тодар перавядзе рэйкі і накіруе наклад на аўтарскую чыгунку."
+  }
+
+  const Polish = () => {
+    const heading = document.getElementById('heading-text');
+    const body1 = document.getElementById('body-text1');
+    const body2 = document.getElementById('body-text2');
+    const body3 = document.getElementById('body-text3');
+    const body4 = document.getElementById('body-text4');
+    const body5 = document.getElementById('body-text5');
+    const body6 = document.getElementById('body-text6');
+    heading.textContent='O naszym wydawnictwie'
+    body1.textContent = "Biblioteka Zwrotniczego Fiodora działa w na północno-zachodnim wybrzeżu Ameryki Północnej, i publikuje on wszystko, co mu się podoba."
+    body2.textContent = "Jesteśmy subiektywni, niezależni i mali. Tak jak lubimy."
+    body3.textContent = "Wszystkie wydatki związane z publikacją pierwszego wydania rękopisów, które mu się podobały (od zawiłej poezji po przepisy kulinarne) pokrywa Zwrotniczy Fiodor – projekt, układ, druk, dostawa i, być może, ilustracje."
+    body4.textContent = "Pierwszy nakład - od 25 do 100 egzemplarzy. Autor otrzymuje honorarium w książkach i zachowuje prawa autorskie do opublikowanego tekstu. "
+    body5.textContent = "Prawa do samej książki pozostają w budce dróżnika."
+    body6.textContent = "O dystrybucji publikacji: Fiodor przestawia zwrotnicę tam, gdzie autor zechce."
+  }
+
   const Russian = () => {
     const heading = document.getElementById('heading-text');
     const body1 = document.getElementById('body-text1');
@@ -137,9 +171,11 @@ const About = () => {
         </Typography>
       </Box>
       <Box sx={{display: 'flex', justifyContent: 'center' }}>
-        <ButtonGroup variant='contained' size='large' sx={{marginTop: {xs: '10px', xl: '50px'}}}>
-          <Button onClick={English}sx={{backgroundColor: '#6297AF', borderColor: '#FFF !important', width: {xl:'150px' }, height: {xl: '60px' }}}>EN</Button>
-          <Button onClick={Russian}sx={{backgroundColor: '#6297AF', width: {xl:'150px' }, height: {xl:'60px' }}}>RU</Button>
+        <ButtonGroup variant='contained' size='large' sx={{marginTop: {xs: '25px', xl: '50px'}, marginBottom: {xs:'-25px', xl: '0px'}}}>
+          <Button onClick={English}sx={{backgroundColor: '#6297AF', borderColor: '#FFF !important', width: {xl:'150px' }, height: {xl: '60px' }}}>English</Button>
+          <Button onClick={Russian}sx={{backgroundColor: '#6297AF', width: {xl:'150px' }, borderColor: '#FFF !important', height: {xl:'60px' }}}>Русский</Button>
+          <Button onClick={Belorusian}sx={{backgroundColor: '#6297AF', width: {xl:'150px' }, borderColor: '#FFF !important', height: {xl:'60px' }}}>Беларускi</Button>
+          <Button onClick={Polish}sx={{backgroundColor: '#6297AF', width: {xl:'150px' }, height: {xl:'60px' }}}>Polski</Button>
         </ButtonGroup>
       </Box>
     </>

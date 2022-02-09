@@ -12,6 +12,15 @@ body {
   color: #FFF;
 }
 
+.pdf-link {
+  display: flex;
+  justify-content: flex-end
+}
+
+.pdf-icon {
+  width: 40%;
+}
+
 /* Footer styling */
 footer {
   position: relative;
