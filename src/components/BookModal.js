@@ -41,7 +41,7 @@ const BookInfo = [
     extra:""
   },
   {
-    title: "Lingering Effects",
+    title: "Lingering Effects, 2021",
     author:"Author: Alexander Kriegel",
     illustrator: "",
     publisher: "Publisher: Библиотека Стрелочника Фёдора",
