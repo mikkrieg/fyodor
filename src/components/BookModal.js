@@ -30,9 +30,9 @@ const BookInfo = [
     title: "Перекати-Море, 2017",
     author:"текст: Феликс Аксёнцев",
     illustrator: "иллюстрации: Александр Кригель",
-    publisher: "Publisher: Библиотека Стрелочника Фёдора",
+    publisher: "Publisher: Logvino Literaturos Namai (в сотрудничестве с Стрелочником Фёдором)",
     isbn: "ISBN: 978-609-8213-15-7",
-    extra: "(опубликована в сотрудничестве с издательством Logvino Literaturos Namai)"
+    extra: ""
   },
   {
     title: "Open to Interpretation, 2020",
@@ -52,6 +52,7 @@ const BookInfo = [
   },
   {
     title: "Записки преданного человека, 2020",
+    date: "2020",
     author:"текст: Константин Густавович Игельстром",
     illustrator: "",
     publisher: "Publisher: Библиотека Стрелочника Фёдора",
@@ -69,6 +70,7 @@ const BookModal = () => {
   let isbn;
   let extra;
   let link;
+  let formattedTitle;
 
   if(bookIndex === 0) {
     link = "https://drive.google.com/file/d/12mHjuI1tAhDkqecVmPW1fPjk0HNVFjhb/view"
@@ -85,8 +87,8 @@ const BookModal = () => {
     extra = BookInfo[bookIndex].extra;
   }
 
-  console.log(bookIndex);
   const handleClose = () => setShowBookModal(false);
+
   return (
     <Modal
     aria-labelledby="transition-modal-title"
